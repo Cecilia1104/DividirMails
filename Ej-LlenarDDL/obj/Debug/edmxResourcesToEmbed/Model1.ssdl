@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EJEMPLOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EJEMPLOModelStoreContainer">
+    <EntitySet Name="MailAlumnos" EntityType="EJEMPLOModel.Store.MailAlumnos" store:Type="Tables" store:Schema="dbo" store:Name="MailAlumnos">
+      <DefiningQuery>SELECT 
+      [MailAlumnos].[idmail] AS [idmail], 
+      [MailAlumnos].[mail] AS [mail]
+      FROM [dbo].[MailAlumnos] AS [MailAlumnos]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'EJEMPLO.dbo.MailAlumnos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="MailAlumnos">
+    <Key>
+      <PropertyRef Name="idmail" />
+    </Key>
+    <Property Name="idmail" Type="int" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

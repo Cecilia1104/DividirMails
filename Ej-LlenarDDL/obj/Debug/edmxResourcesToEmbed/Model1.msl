@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EJEMPLOModelStoreContainer" CdmEntityContainer="EJEMPLOEntities">
+    <EntitySetMapping Name="MAILS">
+      <EntityTypeMapping TypeName="EJEMPLOModel.MailAlumnos">
+        <MappingFragment StoreEntitySet="MailAlumnos">
+          <ScalarProperty Name="idmail" ColumnName="idmail" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
